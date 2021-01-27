@@ -11,3 +11,6 @@ Para ejecutar el server posicionarse en la carpeta backend, instalar nodemon y e
 
 `nodemon npm start `
 
+## Referencias
+
+Basado en el proyecto compartido en el canal de Youtube de PUNCH IT
