@@ -1,0 +1,42 @@
+FORMAT: 1A
+
+# Harry Potter API
+API de Harry Potter :)
+
+#Group Casas
+Recurso de casas disponibles
+
+## Todas las casas [/api/houses]
+### Todas las casas [GET]
+
++ Response 200 (application/json)
+    {
+        info : { count: Number, next : String | null, prev : String | null }
+        data : [
+            {
+                _id: ObjectId,
+                name: String,
+                headMaster: String, 
+                ghost: String,
+                thumbnail: String,
+                colors: Array,
+                animal: String
+                founder: String
+            }
+        ]
+    }
+
+## Mostrar una casa específica [/api/houses/:id]
+### Mostrar una casa específica [GET]
+
++ Response 200 (application/json)
+    {
+        _id: ObjectId,
+        name: String,
+        headMaster: String, 
+        ghost: String,
+        thumbnail: String,
+        colors: Array,
+        animal: String
+        founder: String
+    }
