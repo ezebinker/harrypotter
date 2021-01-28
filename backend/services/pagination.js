@@ -1,8 +1,9 @@
 const { totalRegister } = require("../services/common");
 
-const paginationInfo = ({ req, model }) => {
+const paginationInfo = async({ req, model }) => {
   const { baseUrl: endpoint } = req;
-  const total = totalRegister(model);
+  const total = await totalRegister(model);
+  console.log(total);
   const moreInfo = {};
   if (req.query.page) {
     const page = parseInt(req.query.page);
