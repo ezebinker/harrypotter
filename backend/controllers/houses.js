@@ -4,7 +4,7 @@ const { paginationInfo } = require("../services/pagination");
 
 const all = async (req, res) => {
   try {
-    const data = await findAll(House);
+    const data = await findAll(House, req.query.page);
     const info = await paginationInfo({ req, model: House });
     res.json({ info, data });
   } catch (e) {
