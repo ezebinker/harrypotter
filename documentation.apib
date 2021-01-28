@@ -40,3 +40,27 @@ Recurso de casas disponibles
         animal: String
         founder: String
     }
+
+## Insertar una casa [/api/houses]
+### Insertar una casa [POST]
+
++ Request JSON Message
+
+    + Body
+
+        {
+           _id: ObjectId,
+            name: String,
+            headMaster: String, 
+            ghost: String,
+            thumbnail: String,
+            colors: Array,
+            animal: String
+            founder: String
+        }   
+
++ Response 200 (application/json)
+
+    { 
+        message: "Casa dada de alta", ObjectId, String 
+    }

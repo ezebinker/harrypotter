@@ -1,20 +1,20 @@
-//const { allHouses } = require("../models/houses");
 const House = require("../models/houses");
+const { findById, findAll } = require("../services/common");
+const { paginationInfo } = require("../services/pagination");
 
 const all = async (req, res) => {
   try {
-    const info = {};
-    const data = await findAll();
-    info.count = await totalRegister();
-    res.status(200).json({data, info});
+    const data = await findAll(House);
+    const info = paginationInfo({ req, model: House });
+    res.json({ info, data });
   } catch (e) {
     console.error(e);
     res.status(500).json({ message: "Error" });
   }
 };
 
-const single = async(req, res) => {
-  const data = await findById(req.params.id);
+const single = async (req, res) => {
+  const data = await findById(House, req.params.id);
   res.json(data);
 };
 
@@ -29,10 +29,4 @@ const create = async (req, res) => {
   }
 };
 
-const totalRegister = async () => await House.countDocuments();
-const findById = async () => await House.findById(id);
-const findAll = async () => await House.find();
-
 module.exports = { all, single, create };
-
-//llegué hasta el minuto 7 del video 2. 
