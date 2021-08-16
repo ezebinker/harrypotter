@@ -1,4 +1,5 @@
 # Proyecto Harry Potter
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ezebinker/harrypotter/blob/master/README.en.md)
 
 ## Descripción 
 
