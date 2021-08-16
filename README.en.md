@@ -1,10 +1,10 @@
-# Proyecto Harry Potter
+# Harry Potter API
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/ezebinker/harrypotter/blob/master/README.md)
 
 ## Description 
 
-API REST en *Node.js* y próximamente Front en *React*. 
-Conexión a base de datos no relacional en MongoDB utilizando *Mongoose ORM*.
+API REST based on *Node.js*
+This project takes the data from a MongoDB No-SQL using *Mongoose ORM*.
 
 ## Start 
 
